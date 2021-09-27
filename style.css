@@ -1,0 +1,115 @@
+body {
+  overflow: hidden;
+}
+.calScreen {
+  height: 22vh;
+  width: 100%;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  font-size: 10vh;
+  border-top: 0.5px solid white;
+  border-left: 0.5px solid white;
+  border-right: 0.5px solid white;
+  padding-top: 10px;
+  text-align: right;
+}
+#screen {
+  position: absolute;
+  right: 10px;
+  top: 22vh;
+  transform: translateY(-10vh);
+}
+
+.calBody {
+  height: 74vh;
+  width: 100%;
+  background-color: green;
+}
+
+button {
+  height: 15vh;
+  width: 25%;
+  background-color: rgb(0, 0, 0);
+  float: left;
+  border: 0.1px solid white;
+  color: white;
+  font-size: 20px;
+}
+button:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+#historyButton {
+  height: 30px;
+  width: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 10px;
+  text-align: center;
+  padding: 0;
+}
+
+#historyBar {
+  position: absolute;
+  width: 300px;
+  height: 89.5vh;
+  background-color: rgb(53, 53, 53);
+  left: 5px;
+  display: none;
+  top: 55px;
+  animation-name: slide;
+  animation-direction: right;
+  animation-duration: 1s;
+  overflow-y: scroll;
+}
+#lists {
+  margin-top: 40px;
+}
+.historyList {
+  font-size: 25px;
+  height: 40px;
+  width: 200px;
+  color: white;
+  border-bottom: 1px solid rgb(168, 167, 167);
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  animation-name: showClear;
+  animation-duration: 1s;
+}
+#clear {
+  position: absolute;
+  height: 25px;
+  width: 50px;
+  font-size: 10px;
+  top: 10px;
+  right: 15px;
+  animation-name: showClear;
+  animation-duration: 2s;
+}
+p {
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  top: -1px;
+  left: 15px;
+}
+
+/* Animations */
+@keyframes slide {
+  0% {
+    width: 0px;
+  }
+  to {
+    width: 200px;
+  }
+}
+
+@keyframes showClear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
